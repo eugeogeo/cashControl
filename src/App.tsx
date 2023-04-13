@@ -1,8 +1,8 @@
+import Home from "./pages/Home";
+
 const App = () => {
   return (
-    <div>
-      <p>iniciando projeto</p>
-    </div>
+    <Home />
   );
 };
 
