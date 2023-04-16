@@ -41,6 +41,18 @@ const Home = () => {
                 >
                   Nova Transação
                 </Button>
+                </Box>
+                <Box 
+                    sx={{
+                        display: 'flex',
+                        justifyContent:'space-between',
+                        pt:'40px',
+                    }}
+                >
+                    <CardTransaction/>
+                    <CardTransaction/>
+                    <CardTransaction/>
+                </Box>
             </Box>
         </Box>
     );
