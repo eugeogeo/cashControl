@@ -1,6 +1,6 @@
-import { Box, Button, Typography } from '@mui/material';
-import Logo from './../assets/icons/logo.png';
+import { Box } from '@mui/material';
 import CardTransaction from '../components/CardTransaction';
+import Header from '../components/Header';
 
 const Home = () => {
 
@@ -21,36 +21,8 @@ const Home = () => {
                     flexDirection: 'column',
                 }}
             >
-                {/* header */}
-                <Box 
-                    sx={{ 
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        padding: '5px'
-                    }}
-                >
-                    <Box 
-                        sx={{
-                            display: 'flex', 
-                            alignItems:'center',
-                        }}
-                    >
-                        <img src={Logo} width={'53px'}/>
-                        <Typography
-                            variant="h4" 
-                            component="h4" 
-                            sx={{ color: '#ffffff', pl:'5px'}}
-                        >
-                        CashControl
-                        </Typography>
-                    </Box>
-                    <Button 
-                        color="primary"
-                        variant='contained'
-                    >
-                  Nova Transação
-                    </Button>
-                </Box>
+                <Header />
+                
                 <Box 
                     sx={{
                         display: 'flex',
