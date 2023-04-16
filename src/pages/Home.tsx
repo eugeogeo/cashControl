@@ -22,6 +22,7 @@ const Home = () => {
                 }}
             >
                 <Header />
+                <GroupTransactions />
                 
                 <Box 
                     sx={{
