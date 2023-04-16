@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from '@mui/material';
 import Logo from './../assets/icons/logo.png';
-import theme from '../styles/theme';
+import CardTransaction from '../components/CardTransaction';
 
 const Home = () => {
 
@@ -8,39 +8,48 @@ const Home = () => {
         <Box
             sx={{ 
                 backgroundColor: '#202024',
-                width: '100vw',
-                height: '100vh',
-                p: '36px 158px',
-            }}
-        >
-            {/* header */}
-            <Box 
+                display: 'flex',
+                justifyContent: 'center',
+            }}>
+
+      
+            <Box
                 sx={{ 
+                    width: '80vw',
+                    height: '100vh',
                     display: 'flex',
-                    justifyContent: 'space-between',
-                    padding: '5px'
+                    flexDirection: 'column',
                 }}
             >
+                {/* header */}
                 <Box 
-                    sx={{display: 'flex', 
-                        alignItems:'center',
+                    sx={{ 
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        padding: '5px'
                     }}
                 >
-                    <img src={Logo} width={'53px'}/>
-                    <Typography
-                        variant="h4" 
-                        component="h4" 
-                        sx={{ color: '#ffffff', pl:'5px'}}
+                    <Box 
+                        sx={{
+                            display: 'flex', 
+                            alignItems:'center',
+                        }}
                     >
+                        <img src={Logo} width={'53px'}/>
+                        <Typography
+                            variant="h4" 
+                            component="h4" 
+                            sx={{ color: '#ffffff', pl:'5px'}}
+                        >
                         CashControl
-                    </Typography>
-                </Box>
-                <Button 
-                    color="primary"
-                    variant='contained'
-                >
+                        </Typography>
+                    </Box>
+                    <Button 
+                        color="primary"
+                        variant='contained'
+                    >
                   Nova Transação
-                </Button>
+                    </Button>
                 </Box>
                 <Box 
                     sx={{
