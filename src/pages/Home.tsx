@@ -37,12 +37,14 @@ const Home = () => {
                 backgroundColor: '#202024',
                 display: 'flex',
                 justifyContent: 'center',
+                paddingBottom:'20px',
+                width: '100%',
+                
             }}
         >
             <Box
                 sx={{
                     width: '80vw',
-                    height: '100vh',
                     display: 'flex',
                     flexDirection: 'column',
                 }}
