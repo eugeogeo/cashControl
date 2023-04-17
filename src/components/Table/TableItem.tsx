@@ -6,13 +6,14 @@ const TableItem = () => {
             sx={{ 
                 backgroundColor:'grey.800',
                 display: 'flex',
-                p: '40px'
+                p: '20px',
+                margin: '4px 0px',
             }}
         >
             <Box sx={{ width:'40vw'}}>
 
                 <Typography
-                    variant="body2" 
+                    variant="body1" 
                     component="h4" 
                     sx={{ color: '#ffffff', pl:'5px'}}
                 >
@@ -22,7 +23,7 @@ const TableItem = () => {
             <Box sx={{ width:'20vw'}}>
 
                 <Typography
-                    variant="body2" 
+                    variant="body1" 
                     component="h4" 
                     sx={{ color: '#ffffff', pl:'5px'}}
                 >
@@ -32,24 +33,23 @@ const TableItem = () => {
             <Box sx={{ width:'20vw'}}>
 
                 <Typography
-                    variant="body2" 
+                    variant="body1" 
                     component="h4" 
                     sx={{ color: '#ffffff', pl:'5px'}}
                 >
                   Venda
                 </Typography>
             </Box>
-            <Box sx={{ width:'20vw'}}>
-
+            <Box sx={{ width:'10vw', justifyContent: 'end',}}>
                 <Typography
-                    variant="body2" 
+                    variant="body1" 
                     component="h4" 
                     sx={{ color: '#ffffff', pl:'5px'}}
                 >
                   17/04/2023
                 </Typography>
             </Box>
-      
+
         </Box>
     );
 };
