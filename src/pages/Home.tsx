@@ -9,37 +9,38 @@ import { Controller, useForm } from 'react-hook-form';
 import Table from '../components/Table';
 
 const Home = () => {
-
-    const {
-        control, 
-        handleSubmit,
-        watch
-    } = useForm({
-        defaultValues:{
+    const { control, handleSubmit, watch } = useForm({
+        defaultValues: {
             search: '',
-            limit: 0, 
+            limit: 0,
             page: 0,
-        }
+        },
     });
     const [page, setPage] = useState(0);
     const [data, setData] = useState<DataTransactions>({
-        transactionsCount:0, transactionsList:[]
+        transactionsCount: 0,
+        transactionsList: [],
     });
 
-    const SearchTransactions = async ({ search } : GetTransactions) => {
-        const response = await getTransactions({search: search, page: page, limit:10});
+    const SearchTransactions = async ({ search }: GetTransactions) => {
+        const response = await getTransactions({
+            search: search,
+            page: page,
+            limit: 10,
+        });
         setData(response);
     };
 
     return (
         <Box
-            sx={{ 
+            sx={{
                 backgroundColor: '#202024',
                 display: 'flex',
                 justifyContent: 'center',
-            }}>  
+            }}
+        >
             <Box
-                sx={{ 
+                sx={{
                     width: '80vw',
                     height: '100vh',
                     display: 'flex',
@@ -50,7 +51,7 @@ const Home = () => {
                 <GroupTransactions />
 
                 <Box
-                    component="form" 
+                    component="form"
                     onSubmit={handleSubmit(SearchTransactions)}
                     sx={{
                         paddingTop: '80px',
@@ -60,25 +61,29 @@ const Home = () => {
                 >
                     <Controller
                         control={control}
-                        name='search'
-                        render={({field}) => (
-                            <TextField 
-                                label="Busque uma informação" 
-                                variant='outlined' 
+                        name="search"
+                        render={({ field }) => (
+                            <TextField
+                                label="Busque uma informação"
+                                variant="outlined"
                                 fullWidth
-                                sx={{ backgroundColor: 'grey.900', color: '#fff', borderRadius: '5px'}}
+                                sx={{
+                                    backgroundColor: 'grey.900',
+                                    color: '#fff',
+                                    borderRadius: '5px',
+                                }}
                                 {...field}
                             />
                         )}
                     />
-                    <Button 
+                    <Button
                         color="primary"
-                        variant='outlined'
-                        type='submit'
-                        sx={{ marginLeft: '12px', gap:1, fontWeight: 'bold'}}
+                        variant="outlined"
+                        type="submit"
+                        sx={{ marginLeft: '12px', gap: 1, fontWeight: 'bold' }}
                     >
-                        <img src={SearchIcon}  width={'20px'}/>
-                      Buscar
+                        <img src={SearchIcon} width={'20px'} />
+            Buscar
                     </Button>
                 </Box>
 
