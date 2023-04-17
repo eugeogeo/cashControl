@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { DataTransactions, GetTransactions } from '../@types/api';
 import { getTransactions } from '../services/api';
 import { Controller, useForm } from 'react-hook-form';
+import Table from '../components/Table';
 
 const Home = () => {
 
@@ -80,6 +81,8 @@ const Home = () => {
                       Buscar
                     </Button>
                 </Box>
+
+                <Table />
             </Box>
         </Box>
     );
