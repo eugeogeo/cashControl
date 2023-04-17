@@ -1,16 +1,21 @@
 import { Box } from '@mui/material';
 import TableItem from './TableItem';
+import ButtonArea from './ButtonArea';
 
 
 const Table = () => {
     return (
-        <Box
-            sx={{ pt:'12px'}}
-        >
-            <TableItem />
-            <TableItem />
-            <TableItem />
-            <TableItem />
+        <Box>
+
+            <Box
+                sx={{ pt:'12px'}}
+            >
+                <TableItem />
+                <TableItem />
+                <TableItem />
+                <TableItem />
+            </Box>
+            <ButtonArea />
         </Box>
     );
 };

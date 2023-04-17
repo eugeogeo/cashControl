@@ -83,7 +83,7 @@ const Home = () => {
                         sx={{ marginLeft: '12px', gap: 1, fontWeight: 'bold' }}
                     >
                         <img src={SearchIcon} width={'20px'} />
-            Buscar
+                        Buscar
                     </Button>
                 </Box>
 
