@@ -1,18 +1,21 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Button } from '@mui/material';
 
-const ButtonPage = () => {
+type ButtonPageProps = {
+    rote: string;
+    number: string;
+    isActive?: boolean;
+}
+const ButtonPage = ({number, rote, isActive = false}: ButtonPageProps) => {
 
     return (
-        <Box
-            sx={{
-                backgroundColor:'grey.900',
-                borderRadius:'5px',
-                width: '100%'
-            }}
-        >
-            <Typography variant='body1' component='h4'>
-            1
-            </Typography>
+        <Box>
+            <Button
+                color={isActive ? 'primary' : 'secondary'}
+                variant='contained'
+                href={rote}
+            >
+                {number}
+            </Button>
         </Box>
     );
 };
